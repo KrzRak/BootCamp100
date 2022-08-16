@@ -1,9 +1,11 @@
+# Import
 from turtle import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 import time
 
+# Parameters
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
@@ -22,6 +24,8 @@ screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
 game_is_on = True
+
+# Main
 while game_is_on:
     screen.update()
     time.sleep(0.1)
@@ -44,4 +48,5 @@ while game_is_on:
             game_is_on = False
             scoreboard.game_over()
 
+# Exit Visualization
 screen.exitonclick()
