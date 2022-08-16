@@ -1,7 +1,10 @@
+# Import
+
 import turtle
 from turtle import Turtle, Screen
 import random
 
+# Parameters
 is_race_on = False
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -21,6 +24,7 @@ for turtle_index in range(0, 6):
 if user_bet:
     is_race_on = True
 
+# Main program
 while is_race_on:
     for turtle in all_turtles:
         if turtle.xcor() > 220:
@@ -33,4 +37,5 @@ while is_race_on:
         random_distance = random.randint(0, 10)
         turtle.forward(random_distance)
 
+# Visualization
 screen.exitonclick()
