@@ -1,2 +1,2 @@
-# PrettyTable 
+# PrettyTable from PyPi
 -e git+https://github.com/jazzband/prettytable.git#egg=prettytable
