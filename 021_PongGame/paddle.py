@@ -1,4 +1,7 @@
+# Import
 from turtle import Turtle
+
+# Parameters
 SPEED = 0
 COLOR = "white"
 SHAPE = "square"
@@ -6,7 +9,7 @@ MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
 
-
+# Class
 class Paddle(Turtle):
 
     def __init__(self, position):

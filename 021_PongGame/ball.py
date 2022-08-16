@@ -1,10 +1,13 @@
+# Import
 from turtle import Turtle
+
+# Parameters
 SPEED = 1
 COLOR = "white"
 SHAPE = "circle"
 MOVE_DISTANCE = 10
 
-
+# Class
 class Ball(Turtle):
 
     def __init__(self):

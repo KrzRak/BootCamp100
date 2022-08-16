@@ -1,9 +1,11 @@
+# Import
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
 from scoreboard import Scoreboard
 import time
 
+# Parameters
 screen = Screen()
 screen.setup(width=800, height=600)
 screen.bgcolor("black")
@@ -22,6 +24,8 @@ screen.onkey(l_paddle.up, "w")
 screen.onkey(l_paddle.down, "s")
 
 game_is_on = True
+
+# Main
 while game_is_on:
     screen.update()
     time.sleep(ball.move_speed)
@@ -46,4 +50,5 @@ while game_is_on:
         ball.reset_position()
         score.r_point()
 
+# Visualization exit
 screen.exitonclick()
