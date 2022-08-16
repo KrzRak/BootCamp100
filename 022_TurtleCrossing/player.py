@@ -1,6 +1,8 @@
+# Import
 from turtle import Turtle
 from car_manager import CarManager
 
+# Parameters
 STARTING_POSITION = (0, -280)
 MOVE_DISTANCE = 100
 FINISH_LINE_Y = 280
@@ -8,7 +10,7 @@ COLOR = "black"
 SHAPE = "turtle"
 UP = 90
 
-
+# Class
 class Player(Turtle):
 
     def __init__(self):

@@ -1,14 +1,15 @@
+# Import
 from turtle import Turtle
 import random
 
+# Parameters
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
-
 SHAPE = "square"
 LEFT = 180
 
-
+# Class
 class CarManager(Turtle):
 
     def __init__(self):
