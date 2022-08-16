@@ -1,3 +1,4 @@
+# Class
 class MoneyMachine:
 
     CURRENCY = "$"
