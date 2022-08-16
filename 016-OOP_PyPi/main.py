@@ -1,4 +1,4 @@
-# Example for using internal extensions
+# Example for using internal extensions / Object Oriented Programing from PyPi
 #
 # from turtle import Turtle, Screen
 #
