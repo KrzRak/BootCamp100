@@ -1,7 +1,8 @@
+# Import
 import random
 from turtle import Turtle
 
-
+# Class
 class Food(Turtle):
     def __init__(self):
         super().__init__()

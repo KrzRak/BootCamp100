@@ -1,6 +1,7 @@
+# Import
 from turtle import Turtle
 
-
+# Class
 class Snake:
     STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
     MOVE_DISTANCE = 20

@@ -1,10 +1,11 @@
+# Import
 import time
 from turtle import Screen
 from food import Food
 from scoreboard import Scoreboard
 from snake import Snake
 
-
+# Class
 class Game:
     def __init__(self):
         self.screen = Screen()
@@ -64,7 +65,7 @@ class Game:
 
         self.screen.exitonclick()
 
-
+# Main
 def main():
     game = Game()
     game.run()
