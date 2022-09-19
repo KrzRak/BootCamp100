@@ -23,6 +23,9 @@
 # Ignore code-workspaces
 *.code-workspace
 
+# 000_Trash
+000_Trash/
+
 # 020_Snake
 020_Snake/__pycache__/
 
