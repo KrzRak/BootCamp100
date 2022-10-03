@@ -1,4 +1,4 @@
-# Libraries
+# Import
 from re import S
 import turtle
 import pandas
@@ -10,33 +10,39 @@ image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-
 # Parameters init
-states_correct = 0
-guessed_list = []
-states = pandas.read_csv("50_states.csv")
-states_list = states.state.to_list()
+data = pandas.read_csv("50_states.csv")
+all_states = data.state.to_list()
+# missing_states = data.state.to_list()
+guessed_states = []
 
 # main
-while states_correct < 51:
+while len(guessed_states) < 50:
     # Popup with question and answer
-    title_text = f"{states_correct}/50 States Correct"
-    prompt_text = "What's another state's name"
-    answer_state = screen.textinput(title_text, prompt_text)
-    
-    #state,x,y
-    if answer_state.title() in states_list:
-        turtle.goto(160,150)
-        turtle.write(answer_state.title(), align="center", font=("Arial", 10, "bold")) 
-        states_correct += 1
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct",
+                                    prompt="What's another state's name").title()
 
+    if answer_state == "Exit":
+        missing_states_sol = []
+        for state in all_states:
+            if state not in guessed_states:
+                missing_states_sol.append(state)
+        # neww = pandas.DataFrame(missing_states)
+        # neww.to_csv("new_data.csv")
+        new_data = pandas.DataFrame(missing_states_sol)
+        new_data.to_csv("states_to_learn.csv")
+        break
 
-# Stay with screen all time
-if states_correct > 50:
-    screen.exitonclick()
-else:
-    turtle.mainloop()
-
+    if answer_state in all_states:
+        guessed_states.append(answer_state)
+        # missing_states.remove(answer_state)
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.penup()
+        state_data = data[data.state == answer_state]
+        t.goto(int(state_data.x), int(state_data.y))
+        t.write(answer_state, align="center", font=("Arial", 10, "bold"))
+        #t.write(state_data.state.item(), align="center", font=("Arial", 10, "bold"))
 
 
 ###---------------------------------------###
