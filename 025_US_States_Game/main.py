@@ -1,5 +1,6 @@
 # Import
 from re import S
+from operator import truediv
 import turtle
 import pandas
 
@@ -13,7 +14,6 @@ turtle.shape(image)
 # Parameters init
 data = pandas.read_csv("50_states.csv")
 all_states = data.state.to_list()
-# missing_states = data.state.to_list()
 guessed_states = []
 
 # main
@@ -23,19 +23,13 @@ while len(guessed_states) < 50:
                                     prompt="What's another state's name").title()
 
     if answer_state == "Exit":
-        missing_states_sol = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states_sol.append(state)
-        # neww = pandas.DataFrame(missing_states)
-        # neww.to_csv("new_data.csv")
+        missing_states = [state for state in all_states if state not in guessed_states]
         new_data = pandas.DataFrame(missing_states_sol)
         new_data.to_csv("states_to_learn.csv")
         break
 
     if answer_state in all_states:
         guessed_states.append(answer_state)
-        # missing_states.remove(answer_state)
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()
