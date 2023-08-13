@@ -23,6 +23,9 @@
 # Ignore code-workspaces
 *.code-workspace
 
+# sample.py
+sample.py
+
 # 000_Trash
 000_Trash/
 
