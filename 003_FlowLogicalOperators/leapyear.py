@@ -1,5 +1,7 @@
 # Leap year v1.0
 # -----------------------------------------------------
+# Instructions
+# -----------------------------------------------------
 # This is how you work out whether if a particular year is a leap year.
 #     on every year that is evenly divisible by 4 
 #     **except** every year that is evenly divisible by 100 
