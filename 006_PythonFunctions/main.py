@@ -11,6 +11,8 @@ def my_function():
     #Finally do this
     print("Hello")
 
+my_function()
+
 # For loop
 list_of_items = [0, 1, 2]
 
